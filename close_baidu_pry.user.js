@@ -1,17 +1,16 @@
 // ==UserScript==
 // @name         close baidu Pry
-// @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  自动关闭百度隐私追踪
 // @author       gafx
 // @match        *://*.baidu.com/*
-//@require        http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js
+//@require        http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
 //@require        http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js
 // ==/UserScript==
 
 function show_msg(){
     var msg_box = document.createElement('div');
-      msg_box.style.position='absolute';
+    msg_box.style.position='absolute';
     msg_box.style.top=0;
     msg_box.style.right=0;
     msg_box.style.zIndex=99999;
