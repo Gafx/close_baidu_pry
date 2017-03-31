@@ -32,12 +32,13 @@ function show_msg(){
 (function() {
     if(document.cookie.match(/PRY=(\d)/)){
         pry_value = document.cookie.match(/PRY=(\d)/)[1];
+        expires_time=new Date(Date.now()+356*100*24*60*60*1000)
         if (pry_value == '0'){
-            $.cookie('PRY',1);
+            $.cookie('PRY',1,{expires:expires_time,domain:'.baidu.com'});
             show_msg();
         }
      }else{
-         $.cookie('PRY',1);
+         $.cookie('PRY',1,{expires:expires_time,domain:'.baidu.com'});
          show_msg();
      }
 })();
