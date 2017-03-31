@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         close baidu Pry
-// @version      0.4
+// @version      0.5
 // @description  自动关闭百度隐私追踪
 // @author       gafx
 // @match        *://*.baidu.com/*
