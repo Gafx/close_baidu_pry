@@ -2,7 +2,7 @@
 // @name         close baidu Pry
 // @namespace    http://tampermonkey.net/
 // @version      0.3
-// @description  close baidu Pry
+// @description  自动关闭百度隐私追踪
 // @author       gafx
 // @match        *://*.baidu.com/*
 //@require        http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js
