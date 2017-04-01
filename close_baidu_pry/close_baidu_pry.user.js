@@ -4,8 +4,8 @@
 // @description  自动关闭百度隐私追踪
 // @author       gafx
 // @match        *://*.baidu.com/*
-//@require        http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
-//@require        http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js
+// @require        http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
+// @require        http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js
 // ==/UserScript==
 
 function show_msg(){
