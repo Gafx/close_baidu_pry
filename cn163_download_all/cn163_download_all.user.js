@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         cn163_download_all
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  find download url!
 // @author       gafx
 // @include     http://cn163.net/archives/*
@@ -12,12 +12,6 @@
 function find_download_url(key_type) {
     oa = document.getElementsByTagName("a");
     url_list = [];
-    // url_key = ["magnet","ed2k","thunder"];
-    // if (key_type < url_key.length){
-    //     current_key = url_key[key_type];
-    // }else{
-    //     return false;
-    // }
     max_length = 0;
     for (var i in oa) {
         if (oa[i].href) {
@@ -45,7 +39,6 @@ function add_button(parent,button_size,content,click_func){
     var down_load_button = document.createElement("input");
     down_load_button.setAttribute("type","button");
     down_load_button.setAttribute("size",button_size);
-    // down_load_button.setAttribute("id","newButton");
     down_load_button.setAttribute("value",content);
     down_load_button.onclick=click_func;
     parent.appendChild(down_load_button);
@@ -59,13 +52,13 @@ function add_button(parent,button_size,content,click_func){
     ed2k_url = find_download_url('ed2k');
     thunder_url = find_download_url('thunder');
 
-    if(magnet_url['url_list']){
+    if(magnet_url['url_list'].length != 0){
         add_button(target_element,"50","磁力",function(){show_window(magnet_url['url_list'],magnet_url['url_list'].length*20,magnet_url['max_length'])});
     }
-    if(ed2k_url['url_list']){
+    if(ed2k_url['url_list'].length != 0){
         add_button(target_element,"50","电驴",function(){show_window(ed2k_url['url_list'],ed2k_url['url_list'].length*20,ed2k_url['max_length'])});
     }
-    if(thunder_url['url_list']){
+    if(thunder_url['url_list'].length != 0){
         add_button(target_element,"50","迅雷",function(){show_window(thunder_url['url_list'],thunder_url['url_list'].length*20,thunder_url['max_length'])});
     }
 
